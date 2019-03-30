@@ -16,15 +16,23 @@ class Person {
     this.age = age
     this.sex = sex
   }
+  /* 
+    构造函数也可以这样写
+    constructor(private name: string, private age: number, private sex: boolean)
 
-  private static nmsl: string
+    但这样写后上面就不再需要定义
+      private name: string
+      private age: number
+      private sex: boolean  这个了
+  */
 
-  static get gNmsl (): string {
-    return 'nmsl'
-  }
+  static readonly nmsl: string = 'nmsl' // 静态成员，可以直接ClassName. 的方式访问(readonly)
 
   static wsnd (): void {
     console.log('wsnd')
+  }
+  static readonly kk: Function = (): void => {
+    console.log('kk')
   }
 }
 
@@ -36,5 +44,6 @@ p1.sName = 'lemi'
 
 console.log(p1)
 
-console.log(Person.gNmsl)
+console.log(Person.nmsl)
 Person.wsnd()
+
