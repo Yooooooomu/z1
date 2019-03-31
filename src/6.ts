@@ -35,10 +35,10 @@ class Wenzi extends Inseres {
 }
 
 { // 防止作用域污染
-    let d1 = new Dog2('dog')
+    let d1:Dog2 = new Dog2('dog')
     console.log(d1.eat())
     console.log(d1.run())
-    let w1 = new Wenzi('wenzi')
+    let w1:Wenzi = new Wenzi('wenzi')
     console.log(w1.eat())
     console.log(w1.fly())
     console.log(w1.die())
